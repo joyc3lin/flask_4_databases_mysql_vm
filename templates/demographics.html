@@ -1,0 +1,35 @@
+{% extends "base.html" %} 
+
+        {% block content %}
+            <div class="table">
+                <h2 class="text-xl mb-2">Demographics Table</h2>
+                <table class="table-auto">
+                    <thead>
+                        <tr>
+                            <th class="px-4 py-2">Demographic ID</th>
+                            <th class="px-4 py-2">Preferred Pronouns</th>
+                            <th class="px-4 py-2">Languages Spoken</th>
+                            <th class="px-4 py-2">Address</th>
+                            <th class="px-4 py-2">Phone Number</th>
+                            <th class="px-4 py-2">Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for demographics in data2 %}
+                        <tr>
+                            <td class="border px-4 py-2">{{ demographics.demographic_id }}</td>
+                            <td class="border px-4 py-2">{{ demographics.preferred_pronouns }}</td>
+                            <td class="border px-4 py-2">{{ demographics.languages_spoken }}</td>
+                            <td class="border px-4 py-2">{{ demographics.address }}</td>
+                            <td class="border px-4 py-2">{{ demographics.phone_number }}</td>
+                            <td class="border px-4 py-2">{{ demographics.email }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <br/>
+
+        {% endblock %}
