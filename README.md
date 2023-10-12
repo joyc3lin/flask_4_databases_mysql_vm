@@ -5,7 +5,11 @@ Manually setting up and running a database on a cloud virtual machine. You'll ge
 
 **Guide:**
 
-+ Create a VM on Azure 
++ Create a VM on Azure
+    + Region: US EAST
+    + Security type: standard
+    + Size: B1ms
+    + Set up username and password
 + Ensure that port 3306 is open for the VM
     + Go to networking -> add inbound port rule -> Service: MySQL -> Add
 + In Google Shell's terminal, enter <code>ssh</code>
@@ -31,4 +35,4 @@ Manually setting up and running a database on a cloud virtual machine. You'll ge
 + Enter <code>sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf</code> to enter the configuration file 
     + Scroll down to <code>Bind:</code> and change the IP to <code>0.0.0.0</code> to allow all users to connect 
 + To allow changes to take place, restart mysql with: <code>/etc/init.d/mysql restart</code>
-+ Enter password for VM in order to complete authentication 
++ Enter password for VM in order to complete authentication
